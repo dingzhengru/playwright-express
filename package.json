@@ -1,0 +1,32 @@
+{
+  "name": "playwright-with-express",
+  "version": "1.0.0",
+  "description": "測試 playwright + express",
+  "main": "index.js",
+  "scripts": {
+    "server": "node index.js",
+    "google-search": "npx playwright test tests/google-search.spec.js --headed --project=chromium",
+    "google-search--no-head": "npx playwright test tests/google-search.spec.js --project=chromium",
+    "transfer-all-1": "npx playwright test tests/transfer.spec.js --headed --project=chromium",
+    "bet-ae": "npx playwright test tests/bet-ae.spec.js --headed --project=chromium"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dingzhengru/playwright-with-express.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dingzhengru/playwright-with-express/issues"
+  },
+  "homepage": "https://github.com/dingzhengru/playwright-with-express#readme",
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "dayjs": "^1.11.0",
+    "express": "^4.17.3",
+    "numeral": "^2.0.6"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.21.0"
+  }
+}

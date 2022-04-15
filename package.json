@@ -23,7 +23,9 @@
   "dependencies": {
     "cross-env": "^7.0.3",
     "dayjs": "^1.11.0",
+    "ejs": "^3.1.6",
     "express": "^4.17.3",
+    "express-async-handler": "^1.2.0",
     "numeral": "^2.0.6"
   },
   "devDependencies": {

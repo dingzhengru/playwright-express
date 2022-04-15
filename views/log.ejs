@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log</title>
+
+    <style>
+      body {
+        font-size: 16px;
+        padding: 15px;
+      }
+
+      .log-item.error {
+        color: red;
+        font-weight: bold;
+        font-size: 1.2rem;
+      }
+
+      hr {
+        margin: 15px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <% result.forEach(item => { %>
+    <div class="log-item <%= item.type %>">
+      <span><%= item.title %></span>
+      <br />
+      <span><%= item.data %></span>
+    </div>
+    <hr />
+    <% }); %>
+  </body>
+</html>

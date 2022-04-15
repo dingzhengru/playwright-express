@@ -1,4 +1,5 @@
 const fs = require('fs');
+const ip = require('ip');
 const dayjs = require('dayjs');
 const { exec } = require('child_process');
 const { appendJSONData } = require('./utils/file');
@@ -60,5 +61,5 @@ app.get(
 );
 
 app.listen(port, () => {
-  console.log(`listening on port ${port}`);
+  console.log(`listening on  ${ip.address()}:${port}`);
 });

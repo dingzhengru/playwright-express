@@ -51,11 +51,14 @@ app.get(
   '/log',
   asyncHandler(async (req, res, next) => {
     const date = req.query.d || dayjs().format('YYYY-MM-DD');
-    let logData = JSON.parse(await fs.readFileSync(`logs/${date}.json`, { encoding: 'utf8' }));
+    let logList = [];
+    try {
+      logList = JSON.parse(await fs.readFileSync(`logs/${date}.json`, { encoding: 'utf8' }));
+    } catch {}
 
     res.render('log', {
       //* 這邊不用寫 views/index 是因為 express 預設 template 就是會放在 views 資料夾裡面
-      result: logData,
+      result: logList,
     });
   })
 );

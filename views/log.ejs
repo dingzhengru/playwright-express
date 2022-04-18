@@ -24,13 +24,15 @@
     </style>
   </head>
   <body>
-    <% result.forEach(item => { %>
+    <% if(result.length > 0){ %> <% result.forEach(item => { %>
     <div class="log-item <%= item.type %>">
       <span><%= item.title %></span>
       <br />
       <span><%= item.data %></span>
     </div>
     <hr />
-    <% }); %>
+    <% }); %> <% } else{ %>
+    <h1>No log</h1>
+    <% } %>
   </body>
 </html>
